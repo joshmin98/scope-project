@@ -1,0 +1,29 @@
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+from twilio.rest import Client #SMS API Package
+import re
+import time
+import urllib.request as urlRequest
+import urllib.parse as urlParse
+
+#replace "http://www.cwtv.com/shows/riverdale/" with the url of the page you want to scrape
+url = "http://www.cwtv.com/shows/riverdale/"
+# pretend to be a chrome 47 browser on a windows 10 machine
+headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}
+req = urlRequest.Request(url, headers = headers)
+
+x = urlRequest.urlopen(req)
+
+# get the source code
+allTheHTML = BeautifulSoup(x, 'html.parser')
+
+#replace 'title' with whatever the id/class of your content is
+name_box = allTheHTML.find('title')
+name = name_box.text.strip()
+name = name.encode("utf-8")
+print (name)
+
+#name will hold the content of the element w id/class of 'title' or whatever you replaced that with
+
+
