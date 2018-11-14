@@ -1,4 +1,4 @@
-Dev Setup Instructions:
+# Dev Setup Instructions:
 
 Make sure you have [yarn](https://yarnpkg.com/en/) on your machine
 
