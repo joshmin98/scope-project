@@ -1,11 +1,7 @@
 # Dev Setup Instructions:
 
-Make sure you have [yarn](https://yarnpkg.com/en/) on your machine
+1. Make sure you have [yarn](https://yarnpkg.com/en/) on your machine
 
-After cloning run:
+2. After cloning run: `yarn`
 
-### `yarn`
-
-To start the app in a dev environment run:
-
-### `yarn dev`
+3. To start the app in a dev environment run: `yarn dev`
